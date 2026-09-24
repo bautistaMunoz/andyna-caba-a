@@ -1,0 +1,54 @@
+/* ==========================================================
+   Variables de diseño (colores, tipografía, espaciado)
+   Colores tomados del logo: verde bosque y óxido.
+   ========================================================== */
+:root {
+  color-scheme: light;
+
+  /* Color */
+  --c-bg: #f7f7f3;          /* nieve con un toque verde */
+  --c-surface: #ffffff;
+  --c-ink: #2b3024;         /* verde bosque del logo */
+  --c-ink-soft: #5d6354;
+  --c-ink-mute: #8a8f80;
+  --c-line: #e2e3da;
+  --c-rust: #50382a;        /* óxido del logo */
+  --c-rust-dark: #6e3a1e;   /* óxido oscuro (hover) */
+  --c-rust-soft: #c69a78;
+  --c-night: #1f231a;       /* fondos oscuros */
+  --c-on-dark: #f3f2ec;
+  --c-wa: #1c8a4f;          /* solo burbuja fija de WhatsApp */
+  --c-wa-hover: #16733f;
+
+  /* Tipografía */
+  --f-display: "Marcellus", "Trajan Pro", Georgia, "Times New Roman", serif;
+  --f-body: "Figtree", "Segoe UI", system-ui, -apple-system, sans-serif;
+
+  --fs-xs: 0.75rem;
+  --fs-sm: 0.875rem;
+  --fs-base: 1rem;
+  --fs-md: 1.125rem;
+  --fs-lg: clamp(1.25rem, 1.1rem + 0.6vw, 1.5rem);
+  --fs-xl: clamp(1.75rem, 1.4rem + 1.6vw, 2.75rem);
+  --fs-hero: clamp(2.75rem, 1.8rem + 5vw, 5.5rem);
+
+  /* Espaciado */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 4.5rem;
+  --space-section: clamp(3.5rem, 2.5rem + 5vw, 7rem);
+
+  /* Layout */
+  --container: 1180px;
+  --gutter: clamp(1rem, 0.6rem + 2vw, 2rem);
+  --header-h: 64px;
+  --radius: 6px;
+
+  /* Movimiento */
+  --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
+}

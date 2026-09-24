@@ -1,0 +1,109 @@
+/* ==========================================================
+   4. Contacto y pie de página
+   ========================================================== */
+.contacto {
+  padding-block: var(--space-section);
+}
+
+.contacto__grid {
+  display: grid;
+  gap: var(--space-7);
+}
+
+.contacto__cta {
+  display: grid;
+  justify-items: start;
+  gap: var(--space-3);
+}
+
+.contacto__cta .btn {
+  margin-top: var(--space-3);
+}
+
+.contact-list {
+  display: grid;
+  background: var(--c-surface);
+  border: 1px solid var(--c-line);
+  border-radius: var(--radius);
+}
+
+.contact-list li {
+  display: grid;
+  grid-template-columns: 24px 1fr;
+  grid-template-areas:
+    "icon label"
+    "icon value";
+  column-gap: var(--space-4);
+  align-items: center;
+  padding: var(--space-4) var(--space-5);
+}
+
+.contact-list li + li {
+  border-top: 1px solid var(--c-line);
+}
+
+.contact-list .icon {
+  grid-area: icon;
+  width: 22px;
+  height: 22px;
+  color: var(--c-rust);
+}
+
+.contact-list__label {
+  grid-area: label;
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--c-ink-mute);
+}
+
+.contact-list__value {
+  grid-area: value;
+  font-size: var(--fs-md);
+  overflow-wrap: anywhere;
+  user-select: all;
+}
+
+a.contact-list__value {
+  text-decoration: none;
+  user-select: auto;
+}
+
+a.contact-list__value:hover {
+  color: var(--c-rust);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+@media (min-width: 900px) {
+  .contacto__grid {
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: var(--space-8);
+  }
+}
+
+/* ---------- Pie ---------- */
+.site-footer {
+  padding-block: var(--space-7) calc(var(--space-8) + env(safe-area-inset-bottom, 0px));
+  background: var(--c-surface);
+  border-top: 1px solid var(--c-line);
+}
+
+.site-footer__inner {
+  display: grid;
+  justify-items: center;
+  gap: var(--space-4);
+  text-align: center;
+}
+
+.site-footer__logo {
+  width: min(260px, 70%);
+  mix-blend-mode: multiply;
+}
+
+.site-footer__copy {
+  font-size: var(--fs-sm);
+  color: var(--c-ink-mute);
+}

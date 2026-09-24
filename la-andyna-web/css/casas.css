@@ -1,0 +1,268 @@
+/* ==========================================================
+   2. Las casas
+   ========================================================== */
+.casas {
+  padding-top: var(--space-section);
+}
+
+/* ---------- Selector de casa ---------- */
+.picker {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+  gap: var(--space-4);
+}
+
+.picker__card {
+  display: grid;
+  grid-template-columns: 88px 1fr auto;
+  align-items: center;
+  gap: var(--space-4);
+  padding: var(--space-3);
+  padding-right: var(--space-5);
+  background: var(--c-surface);
+  border: 1px solid var(--c-line);
+  border-radius: var(--radius);
+  text-decoration: none;
+  transition: border-color 0.2s var(--ease), transform 0.2s var(--ease);
+}
+
+.picker__card:hover {
+  border-color: var(--c-rust-soft);
+  transform: translateY(-2px);
+}
+
+.picker__card img {
+  width: 88px;
+  height: 88px;
+  object-fit: cover;
+  border-radius: calc(var(--radius) - 2px);
+}
+
+.picker__body {
+  display: grid;
+  gap: 2px;
+}
+
+.picker__name {
+  font-family: var(--f-display);
+  font-size: var(--fs-lg);
+}
+
+.picker__cap {
+  font-size: var(--fs-sm);
+  color: var(--c-ink-soft);
+}
+
+.picker__arrow {
+  color: var(--c-rust);
+}
+
+/* ---------- Ficha de cada casa ---------- */
+.casa {
+  padding-block: var(--space-section);
+}
+
+.casa + .casa {
+  border-top: 1px solid var(--c-line);
+}
+
+.casa--alt {
+  background: var(--c-surface);
+}
+
+.casa__grid {
+  display: grid;
+  gap: var(--space-6);
+}
+
+.casa__main img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border-radius: var(--radius);
+}
+
+.casa__info {
+  display: grid;
+  align-content: start;
+  justify-items: start;
+  gap: var(--space-3);
+}
+
+.casa__num {
+  font-family: var(--f-display);
+  font-size: 3.5rem;
+  line-height: 1;
+  color: var(--c-rust-soft);
+}
+
+.casa__name {
+  font-family: var(--f-display);
+  font-size: var(--fs-xl);
+}
+
+.casa__cap {
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--c-rust);
+}
+
+.casa__desc {
+  max-width: 34rem;
+  font-size: var(--fs-md);
+  color: var(--c-ink-soft);
+  margin-bottom: var(--space-3);
+}
+
+.casa__label {
+  font-family: var(--f-body);
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--c-ink-mute);
+}
+
+.casa__note {
+  font-size: var(--fs-sm);
+  color: var(--c-ink-mute);
+  margin-bottom: var(--space-4);
+}
+
+/* ---------- Equipamiento ---------- */
+.amenities {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-2) var(--space-5);
+  width: 100%;
+  max-width: 28rem;
+}
+
+.amenities li {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding-block: var(--space-2);
+  border-bottom: 1px solid var(--c-line);
+  font-size: var(--fs-sm);
+}
+
+.amenities li::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  flex-shrink: 0;
+  background: var(--c-rust);
+  transform: rotate(45deg);
+}
+
+/* ---------- Carrusel de fotos y video ---------- */
+.casa__media {
+  margin-top: var(--space-7);
+}
+
+.gallery {
+  min-width: 0;
+}
+
+.gallery__head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: var(--space-3);
+}
+
+.gallery__count {
+  font-size: var(--fs-sm);
+  color: var(--c-ink-mute);
+}
+
+.gallery__viewport {
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: thin;
+  scrollbar-color: var(--c-rust-soft) transparent;
+  padding-bottom: var(--space-3);
+}
+
+.gallery__track {
+  display: flex;
+  gap: var(--space-3);
+}
+
+.gallery__item {
+  flex: 0 0 auto;
+  width: clamp(200px, 62vw, 270px);
+  scroll-snap-align: start;
+}
+
+.gallery__btn {
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  background: none;
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.gallery__btn img {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  transition: transform 0.4s var(--ease);
+}
+
+.gallery__btn:hover img {
+  transform: scale(1.04);
+}
+
+/* ---------- Video dentro del carrusel ---------- */
+.gallery__item--video {
+  position: relative;
+  aspect-ratio: 3 / 4;
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: var(--c-night);
+}
+
+.gallery__item--video video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* En pantalla completa el video se ve entero, sin recorte */
+.gallery__item--video video:fullscreen {
+  object-fit: contain;
+}
+
+.gallery__tag {
+  position: absolute;
+  top: var(--space-3);
+  right: var(--space-3);
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+  background: rgba(31, 35, 26, 0.72);
+  color: var(--c-on-dark);
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  pointer-events: none;
+}
+
+/* ---------- Escritorio ---------- */
+@media (min-width: 900px) {
+  .casa__grid {
+    grid-template-columns: 1.1fr 1fr;
+    align-items: center;
+    gap: var(--space-8);
+  }
+
+  .casa--alt .casa__main {
+    order: 2;
+  }
+}

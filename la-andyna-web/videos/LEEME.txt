@@ -1,0 +1,4 @@
+Poné acá los videos de cada casa (formato .mp4, idealmente menos de 20 MB):
+  andyna-1.mp4
+  andyna-2.mp4
+Después completá el campo "video" de cada casa en js/config.js.

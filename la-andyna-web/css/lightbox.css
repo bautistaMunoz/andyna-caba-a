@@ -1,0 +1,85 @@
+/* ==========================================================
+   Visor de fotos (lightbox)
+   ========================================================== */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: var(--space-2);
+  padding: calc(var(--space-7) + env(safe-area-inset-top, 0px)) var(--space-2)
+    calc(var(--space-5) + env(safe-area-inset-bottom, 0px));
+  background: rgba(18, 20, 15, 0.96);
+  color: var(--c-on-dark);
+}
+
+.lightbox__figure {
+  display: grid;
+  justify-items: center;
+  gap: var(--space-3);
+  min-width: 0;
+  height: 100%;
+  grid-template-rows: 1fr auto;
+}
+
+.lightbox__img {
+  max-width: 100%;
+  max-height: 100%;
+  min-height: 0;
+  object-fit: contain;
+  align-self: center;
+  border-radius: 4px;
+}
+
+.lightbox__bar {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-4);
+  width: 100%;
+  max-width: 640px;
+  font-size: var(--fs-sm);
+  color: rgba(243, 242, 236, 0.75);
+}
+
+.lightbox__counter {
+  font-variant-numeric: tabular-nums;
+  flex-shrink: 0;
+}
+
+.lightbox__nav,
+.lightbox__close {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 1px solid rgba(243, 242, 236, 0.25);
+  border-radius: 50%;
+  background: rgba(243, 242, 236, 0.06);
+  color: var(--c-on-dark);
+  transition: background-color 0.2s var(--ease);
+}
+
+.lightbox__nav:hover,
+.lightbox__close:hover {
+  background: rgba(243, 242, 236, 0.16);
+}
+
+.lightbox__close {
+  position: absolute;
+  top: calc(var(--space-3) + env(safe-area-inset-top, 0px));
+  right: var(--space-3);
+}
+
+/* En celular las flechas se ocultan: se navega deslizando */
+@media (max-width: 600px) {
+  .lightbox {
+    grid-template-columns: 1fr;
+    padding-inline: var(--space-3);
+  }
+  .lightbox__nav {
+    display: none;
+  }
+}
