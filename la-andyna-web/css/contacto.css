@@ -107,3 +107,22 @@ a.contact-list__value:hover {
   font-size: var(--fs-sm);
   color: var(--c-ink-mute);
 }
+
+.site-footer__credit {
+  font-size: var(--fs-xs);
+  color: var(--c-ink-mute);
+  letter-spacing: 0.04em;
+}
+
+.site-footer__credit a {
+  color: var(--c-ink-soft);
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 1px solid var(--c-line);
+  transition: color 0.2s var(--ease), border-color 0.2s var(--ease);
+}
+
+.site-footer__credit a:hover {
+  color: var(--c-rust);
+  border-color: var(--c-rust);
+}

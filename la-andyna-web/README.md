@@ -49,8 +49,8 @@ videos/               Videos de cada casa
 Todo está en `contacto` dentro de `js/config.js`.
 
 **Cambiar la foto de la sección Caviahue**
-Reemplazar `img/caviahue/invierno.jpg` y `img/caviahue/otono.jpg` por fotos nuevas con el mismo nombre
-(horizontales, idealmente de 1200 px de ancho o más).
+Reemplazar `img/caviahue/vista-aerea.jpg` y `img/caviahue/cascada.jpg` por fotos nuevas con el mismo nombre
+(verticales, idealmente de 1080 × 1440 px).
 
 ## Publicación
 

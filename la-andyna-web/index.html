@@ -60,7 +60,11 @@
 
     <!-- ========== 1. PORTADA ========== -->
     <section id="inicio" class="hero">
-      <img class="hero__img" src="img/andyna-1/exterior-invierno-1.jpg" alt="La Andyna con nieve en Caviahue" width="1080" height="1440" fetchpriority="high">
+      <picture>
+        <!-- Escritorio y celular usan recortes distintos del mismo paisaje -->
+        <source media="(min-width: 900px)" srcset="img/portada-caviahue.jpg" width="1200" height="1000">
+        <img class="hero__img" src="img/portada-caviahue-movil.jpg" alt="Lago y cartel de Caviahue con nieve" width="1200" height="1060" fetchpriority="high">
+      </picture>
       <div class="hero__shade" aria-hidden="true"></div>
       <div class="container hero__content">
         <p class="eyebrow eyebrow--light">Caviahue · Neuquén</p>
@@ -200,10 +204,10 @@
           <p>Un lugar para descansar, disfrutar y vivir cada estación de una manera diferente.</p>
         </div>
         <figure class="caviahue__photo caviahue__photo--a">
-          <img src="img/caviahue/invierno.jpg" alt="Lago Caviahue nevado en invierno" width="900" height="500" loading="lazy">
+          <img src="img/caviahue/vista-aerea.jpg" alt="Vista aérea de Caviahue y el lago nevado al atardecer" width="1080" height="607" loading="lazy">
         </figure>
         <figure class="caviahue__photo caviahue__photo--b">
-          <img src="img/caviahue/otono.jpg" alt="Lago de montaña con volcán nevado" width="630" height="360" loading="lazy">
+          <img src="img/caviahue/cascada.jpg" alt="Cascada de montaña con araucarias cerca de Caviahue" width="1080" height="1440" loading="lazy">
         </figure>
       </div>
     </section>

@@ -34,7 +34,6 @@ window.ANDYNA = {
         { archivo: "exterior-invierno-2", alt: "La Andyna I después de una nevada" },
         { archivo: "exterior-verano-1", alt: "Frente de La Andyna I en otoño" },
         { archivo: "exterior-verano-2", alt: "La Andyna I y su jardín en verano" },
-        { archivo: "living-1", alt: "Living con columnas de piedra" },
         { archivo: "living-2", alt: "Living integrado a la cocina" },
         { archivo: "living-tv", alt: "Living con Smart TV y salida al deck" },
         { archivo: "comedor-1", alt: "Comedor junto al ventanal" },
@@ -42,8 +41,7 @@ window.ANDYNA = {
         { archivo: "cocina", alt: "Cocina equipada" },
         { archivo: "dormitorio-principal", alt: "Dormitorio principal con cama doble" },
         { archivo: "dormitorio-2", alt: "Segundo dormitorio con cama nido" },
-        { archivo: "bano-1", alt: "Baño con ducha" },
-        { archivo: "bano-2", alt: "Baño, vista del vanitory" }
+        { archivo: "bano-1", alt: "Baño con ducha" }
       ]
     },
 
@@ -52,7 +50,6 @@ window.ANDYNA = {
       video: "videos/andyna-2.mp4",
       videoPortada: "img/andyna-2/video-portada.jpg",
       fotos: [
-        { archivo: "living-1", alt: "Living con hogar a leña" },
         { archivo: "living-2", alt: "Living, hogar y escalera" },
         { archivo: "living-3", alt: "Sillones del living" },
         { archivo: "comedor-1", alt: "Comedor para seis personas" },
@@ -60,7 +57,6 @@ window.ANDYNA = {
         { archivo: "cocina-1", alt: "Cocina equipada" },
         { archivo: "cocina-2", alt: "Cocina, vista lateral" },
         { archivo: "dormitorio-principal-1", alt: "Dormitorio principal con techo de madera" },
-        { archivo: "dormitorio-principal-2", alt: "Dormitorio principal con cama doble" },
         { archivo: "dormitorio-principal-3", alt: "Dormitorio principal de noche" },
         { archivo: "dormitorio-2", alt: "Dormitorio con dos camas" },
         { archivo: "dormitorio-3", alt: "Dormitorio con dos camas y Smart TV" },

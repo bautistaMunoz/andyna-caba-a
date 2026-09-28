@@ -9,7 +9,8 @@
 
 .caviahue__grid {
   display: grid;
-  gap: var(--space-4);
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-3);
 }
 
 .caviahue__text {
@@ -40,7 +41,7 @@
 .caviahue__photo img {
   width: 100%;
   height: 100%;
-  aspect-ratio: 16 / 9;
+  aspect-ratio: 3 / 4;
   object-fit: cover;
 }
 
@@ -59,25 +60,14 @@
 
 @media (min-width: 900px) {
   .caviahue__grid {
-    grid-template-columns: 5fr 7fr;
-    grid-template-rows: auto auto;
+    grid-template-columns: 1.1fr 1fr 1fr;
     align-items: center;
-    gap: var(--space-5) var(--space-7);
+    gap: var(--space-5);
   }
 
   .caviahue__text {
-    grid-column: 1;
-    grid-row: 1 / span 2;
+    grid-column: auto;
     margin-bottom: 0;
-  }
-
-  .caviahue__photo--a {
-    grid-column: 2;
-  }
-
-  .caviahue__photo--b {
-    grid-column: 2;
-    width: 82%;
-    justify-self: end;
+    padding-right: var(--space-5);
   }
 }

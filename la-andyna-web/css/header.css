@@ -50,6 +50,7 @@
 
 .site-nav a {
   position: relative;
+  white-space: nowrap;
   padding-block: var(--space-2);
   font-size: var(--fs-xs);
   font-weight: 600;
@@ -83,5 +84,17 @@
 @media (max-width: 640px) {
   .brand__name {
     display: none;
+  }
+}
+
+@media (max-width: 400px) {
+  .site-nav {
+    gap: 0.75rem;
+  }
+  .site-nav a {
+    letter-spacing: 0.1em;
+  }
+  .brand__mark {
+    height: 32px;
   }
 }
