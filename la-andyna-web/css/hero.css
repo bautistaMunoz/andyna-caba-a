@@ -59,13 +59,12 @@
   color: rgba(243, 242, 236, 0.86);
 }
 
-/* Escritorio: collage a pantalla completa. La casa (derecha) queda
-   nítida; el texto va a la izquierda, sobre los paisajes desenfocados. */
+/* Escritorio: collage a pantalla completa, sin desenfoque ni
+   oscurecido. El texto se apoya solo en una sombra suave. */
 @media (min-width: 900px) {
   .hero {
-    align-items: center;
     min-height: 0;
-    aspect-ratio: 2061 / 763;
+    aspect-ratio: 1600 / 640;
   }
 
   .hero__img {
@@ -73,20 +72,23 @@
   }
 
   .hero__shade {
-    background: linear-gradient(
-      to right,
-      rgba(24, 28, 19, 0.72) 0%,
-      rgba(24, 28, 19, 0.5) 40%,
-      rgba(24, 28, 19, 0) 56%
-    );
-    -webkit-backdrop-filter: blur(7px);
-    backdrop-filter: blur(7px);
-    -webkit-mask-image: linear-gradient(to right, #000 0%, #000 42%, transparent 56%);
-    mask-image: linear-gradient(to right, #000 0%, #000 42%, transparent 56%);
+    display: none;
+  }
+
+  /* El texto va a la derecha de la casa, sobre el cielo */
+  .hero {
+    align-items: flex-start;
   }
 
   .hero__content {
-    text-shadow: 0 2px 16px rgba(0, 0, 0, 0.5);
+    padding-top: 4%;
+    padding-left: max(var(--gutter), 42%);
+    max-width: none;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.55), 0 0 28px rgba(0, 0, 0, 0.45);
+  }
+
+  .hero__text {
+    color: var(--c-on-dark);
   }
 
   .hero__content .btn {

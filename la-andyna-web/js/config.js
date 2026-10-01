@@ -34,6 +34,7 @@ window.ANDYNA = {
         { archivo: "exterior-invierno-2", alt: "La Andyna I después de una nevada" },
         { archivo: "exterior-verano-1", alt: "Frente de La Andyna I en otoño" },
         { archivo: "exterior-verano-2", alt: "La Andyna I y su jardín en verano" },
+        { archivo: "living-1", alt: "Living con columnas de piedra" },
         { archivo: "living-2", alt: "Living integrado a la cocina" },
         { archivo: "living-tv", alt: "Living con Smart TV y salida al deck" },
         { archivo: "comedor-1", alt: "Comedor junto al ventanal" },
