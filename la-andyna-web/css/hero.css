@@ -64,26 +64,35 @@
 @media (min-width: 900px) {
   .hero {
     min-height: 0;
-    aspect-ratio: 1600 / 640;
+    /* proporción de la imagen (40vw), pero nunca menos de 620px en notebooks */
+    height: max(620px, 40vw);
   }
 
   .hero__img {
-    object-position: center;
+    object-position: left center; /* si se recorta, se pierde la derecha, no la casa */
   }
 
+  /* Sombra suave solo abajo para que se lea el texto (sin desenfoque) */
   .hero__shade {
-    display: none;
+    background: linear-gradient(
+      to top,
+      rgba(24, 28, 19, 0.6) 0%,
+      rgba(24, 28, 19, 0.25) 30%,
+      rgba(24, 28, 19, 0) 50%
+    );
   }
 
-  /* El texto va a la derecha de la casa, sobre el cielo */
+  /* El texto va pegado al margen izquierdo, en la parte de abajo,
+     para que no tape la casa */
   .hero {
-    align-items: flex-start;
+    align-items: flex-end;
   }
 
   .hero__content {
-    padding-top: 4%;
-    padding-left: max(var(--gutter), 42%);
     max-width: none;
+    margin: 0;
+    padding-block: var(--space-5) clamp(1.5rem, 3vw, 3rem);
+    padding-inline: clamp(1.5rem, 3.5vw, 4rem);
     text-shadow: 0 2px 6px rgba(0, 0, 0, 0.55), 0 0 28px rgba(0, 0, 0, 0.45);
   }
 
